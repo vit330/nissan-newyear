@@ -1,0 +1,14 @@
+.screenshot {
+  &::before {
+    display: none;
+  }
+
+  .designer__container {
+    margin: auto;
+    padding: 0;
+  }
+
+  .designer__car {
+    margin-top: 0;
+  }
+}

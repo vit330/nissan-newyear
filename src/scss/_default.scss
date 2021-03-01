@@ -1,0 +1,82 @@
+:root {
+  font-size: 0.6945vw;
+  // font-size: 1.111vh;
+
+  @include tablet {
+    font-size: 1.302vw;
+  }
+  @include mob {
+    font-size: 2.667vw;
+  }
+}
+
+*,
+*::before,
+*::after {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  word-spacing: normal;
+  text-indent: 0;
+  appearance: none;
+  background-color: transparent;
+  color: inherit;
+  // outline-color: $accent;
+}
+
+// *::selection {
+//   background-color: $accent;
+//   color: #fff;
+// }
+
+body {
+  min-width: 320px;
+  font-family: "Nissan Brand", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+img,
+svg,
+video,
+iframe,
+button {
+  vertical-align: top;
+}
+
+button {
+  cursor: pointer;
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+svg {
+  fill: inherit;
+  stroke: inherit;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

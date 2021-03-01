@@ -1,0 +1,172 @@
+.controls {
+  .swiper-container {
+    padding: 0 2.4rem;
+
+    @include tablet {
+      padding: 0 6rem;
+    }
+    @include mob {
+      padding: 0 1.2rem;
+    }
+  }
+  .swiper-slide {
+    width: 16.8rem;
+    margin-right: 1.6rem;
+  }
+}
+
+.controls__common {
+  @include row(_, center);
+  height: 9.6rem;
+  padding: 0 2.4rem;
+  background-color: #fff;
+
+  @include mob {
+    justify-content: space-between;
+    padding: 0 1.95rem;
+  }
+}
+
+.controls__item {
+  @include row(_, center);
+  width: 20.8rem;
+  font-size: 1.4rem;
+  outline: 0;
+  stroke: #000;
+  fill: #000;
+  transition: stroke $dur, fill $dur;
+
+  @include tablet {
+    width: 18rem;
+  }
+  @include mob {
+    width: auto;
+  }
+
+  &--bg {
+    @include tablet {
+      width: 20.8rem;
+    }
+    @include mob {
+      width: auto;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 3.43em;
+    height: 3.43em;
+  }
+
+  span {
+    margin-left: 0.9em;
+    line-height: 1.2;
+
+    @include mob {
+      display: none;
+    }
+  }
+
+  b {
+    display: block;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  &.active, &:hover, &:focus {
+    stroke: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.controls__done-btn {
+  flex-shrink: 0;
+  margin-left: auto;
+  stroke: currentColor;
+
+  @include mob {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  span {
+    @include mob {
+      display: none;
+    }
+  }
+
+  svg {
+    display: none;
+    width: 2.1rem;
+    height: 2rem;
+
+    @include mob {
+      display: inline-block;
+    }
+  }
+}
+
+.controls__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 17.8rem;
+  padding-top: 3.6rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.controls__close-btn {
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+
+  @include mob {
+    right: 0;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.controls__arrow {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  width: 10rem;
+  padding-right: 2.8rem;
+  text-align: right;
+  outline: 0;
+  background-image: linear-gradient(to left, #fff 20%, rgba(#fff, 0) 100%);
+  stroke: $dark-gray;
+  transition: visibility $dur, opacity $dur;
+
+  @include tablet {
+    display: block;
+  }
+  @include mob {
+    width: 4rem;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  &--prev {
+    transform: scaleX(-1);
+    left: 0;
+  }
+  &--next {
+    right: 0;
+  }
+
+  &.swiper-button-disabled {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

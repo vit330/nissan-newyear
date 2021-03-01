@@ -1,0 +1,10 @@
+.pattern {
+  @include overlay;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    @include overlay;
+    background-color: rgba(#000, 0.2);
+  }
+}

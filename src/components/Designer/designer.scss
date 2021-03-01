@@ -1,0 +1,145 @@
+.designer {
+  @include column(_, center);
+  min-height: 100vh;
+
+  @include mob {
+    padding-bottom: 9.6rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 55.33%;
+    background: linear-gradient(transparent, rgba(#000, 0.4) 17%, rgba(#000, 0.9) 62.6%);
+
+    @include tablet {
+      height: 51.75%;
+    }
+    @include mob {
+      height: 57.2%;
+    }
+  }
+}
+
+.designer__container  {
+  @include column(_, center);
+  padding: 4.4em 0 4em;
+  font-size: calc(1.244vmin - 0.12rem);
+  text-align: center;
+  color: #fff;
+
+  @include tablet {
+    padding-top: 10.6em;
+    font-size: 1rem;
+  }
+  @include mob {
+    padding-top: 6.1em;
+  }
+}
+
+.designer__logo {
+  fill: currentColor;
+  outline: 0;
+
+  svg {
+    width: 9.6em;
+    height: 9.6em;
+
+    @include mob {
+      width: 6.4em;
+      height: 6.4em;
+    }
+  }
+}
+
+.designer__car {
+  margin-top: 4.2em;
+
+  img {
+    width: 73em;
+
+    @include mob {
+      width: 34.5em;
+    }
+  }
+}
+
+.designer__controls {
+  margin-top: auto;
+  width: 100%;
+
+  @include mob {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.designer__bottom {
+  margin-top: 1.4em;
+  padding: 0 2.4em;
+
+  @include mob {
+    margin-top: 3.1em;
+  }
+}
+
+.designer__creation {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility $dur, opacity $dur;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.designer__creation-title {
+  max-width: 55em;
+  margin-top: 4.3em;
+
+  @include mob {
+    margin-top: 4.4em;
+  }
+
+  span {
+    font-size: 3.2em;
+
+    @include mob {
+      font-size: 2em;
+    }
+  }
+}
+
+.designer__heading-title {
+  @include mob {
+    line-height: 1.2;
+  }
+
+  span {
+    display: block;
+
+    &:nth-child(1) {
+      font-size: 2.4em;
+    }
+    &:nth-child(2) {
+      margin-top: 0.2em;
+      font-size: 4.8em;
+    }
+  }
+}
+
+.designer__heading-btn {
+  height: 4.8em;
+  margin-top: 3.3em;
+  padding: 0 3.6em;
+  font-size: inherit;
+
+  span {
+    font-size: 1.4em;
+  }
+}

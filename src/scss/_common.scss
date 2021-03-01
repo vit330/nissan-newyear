@@ -1,0 +1,116 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.btn {
+  @include row(center, center);
+  display: inline-flex;
+  height: 4.8rem;
+  padding: 0 2.6em;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  outline: 0;
+  text-decoration: none;
+  background-color: $accent-color;
+  color: #fff;
+  transition: background-color $dur;
+
+  &:hover, &:focus {
+    background-color: darken($accent-color, 6%);
+  }
+}
+
+.close-btn {
+  padding: 1.2rem;
+  outline: 0;
+  stroke: $dark-gray;
+  transition: stroke $dur;
+
+  @include mob {
+    padding: 1rem;
+  }
+
+  &:hover, &:focus {
+    stroke: $accent-color;
+  }
+}
+
+.change-btn {
+  position: absolute;
+  top: 2.4rem;
+  left: 2.4rem;
+  @include row(center, center);
+  width: 15.5rem;
+  height: 4.4rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #fff;
+  stroke: #000;
+  transition: background-color $dur;
+
+  @include mob {
+    width: 4.4rem;
+  }
+
+  &:hover, &:focus {
+    background-color: darken(#fff, 10%);
+  }
+
+  svg {
+    transform: scaleX(-1);
+    width: 0.64em;
+    height: 1.14em;
+  }
+
+  span {
+    margin-left: 1em;
+
+    @include mob {
+      display: none;
+    }
+  }
+}
+
+@mixin thumb {
+  width: 3.2em;
+  height: 3.2em;
+  margin-top: -1.4em;
+  border: 0;
+  border-radius: 50%;
+  border: 0.6em solid $accent-color;
+  box-sizing: border-box;
+  background-color: #fff;
+  appearance: none;
+  cursor: pointer;
+}
+
+@mixin track {
+  height: 0.4em;
+  border-radius: 2em;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.range {
+  input {
+    width: 30em;
+    outline: 0;
+
+    &::-webkit-slider-thumb {
+      @include thumb;
+    }
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+    &::-moz-range-track {
+      @include track;
+    }
+  }
+}

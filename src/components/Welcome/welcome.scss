@@ -1,0 +1,130 @@
+.welcome {
+  @include column(_, center);
+  min-height: 100vh;
+}
+
+.welcome__container {
+  @include column(_, center);
+  width: 72.8em;
+  height: 72.8em;
+  margin: auto 0;
+  padding: 5.4em 12em 0;
+  font-size: 1.111vmin;
+  text-align: center;
+  color: #fff;
+
+  @include tablet {
+    width: 70em;
+    height: 70em;
+    padding: 3.8em 10em 0;
+    font-size: 1.302vw;
+  }
+  @include mob {
+    padding: 4.8em 2em 0;
+    font-size: 2.667vw;
+    width: 100%;
+    height: 56.2em;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(#000, 0.8);
+    // backdrop-filter: blur(30px);
+
+    @include mob {
+      width: 56.2em;
+      height: 56.2em;
+    }
+  }
+}
+
+.welcome__logo {
+  fill: currentColor;
+
+  svg {
+    width: 9.6em;
+    height: 9.6em;
+
+    @include mob {
+      width: 6.4em;
+      height: 6.4em;
+    }
+  }
+}
+
+.welcome__title {
+  margin-top: 0.7em;
+  font-size: 4.8em;
+  line-height: 1.2;
+
+  @include mob {
+    font-size: 3.2em;
+  }
+}
+
+.welcome__caption {
+  margin-top: 1em;
+  font-size: 2.4em;
+
+  @include mob {
+    margin-top: 1.3em;
+    font-size: 1.6em;
+  }
+}
+
+.welcome__items {
+  @include row(center);
+  margin-top: 4.8em;
+
+  @include mob {
+    margin-top: 3.2em;
+  }
+}
+
+.welcome__item {
+  width: 15em;
+  fill: currentColor;
+
+  @include mob {
+    width: 11.8em;
+  }
+
+  svg {
+    width: 6.4em;
+    height: 6.4em;
+  }
+
+  p {
+    margin-top: 1.2em;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include mob {
+      margin-top: 1.8em;
+      font-size: 1.4em;
+    }
+  }
+}
+
+.welcome__btn {
+  min-width: 20em;
+  height: 4.8em;
+  margin-top: 4.8em;
+  font-size: inherit;
+
+  @include mob {
+    margin-top: 3.3em;
+  }
+
+  span {
+    font-size: 1.4em;
+  }
+}
